@@ -14,7 +14,8 @@ describe Calculator, "Sobre calculadora" do
         it {
             #calc = Calculator.new
             result = subject.sum(-5,7)
-            expect(result).to eq(2)
+            expect(result).to eq(2) #Que seja
+            expect(result).not_to eq(1) #Que não seja
         }
     end
 end
@@ -40,7 +41,7 @@ end
 
 #Segunda forma de fazer "SubjectExplicito"
 describe 'Classe Calculadora 3' do
-    subject(:calc) { Calculator.new() } #classe reservada
+    subject(:calc) { Calculator.new() } #classe reservada. Caso sua classe receba parametros lembre de passar
 
     context '#sum' do       
         it {
